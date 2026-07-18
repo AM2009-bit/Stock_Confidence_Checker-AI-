@@ -1,0 +1,33 @@
+# ===========================
+# DipScanner-AI Requirements
+# ===========================
+
+# Data Processing
+pandas>=2.2.0
+
+# IMPORTANT: pandas-ta 0.3.14b0 (the last released version on PyPI)
+# internally references numpy.NaN, an alias that was REMOVED in
+# NumPy 2.0 (raises: "AttributeError: `np.NaN` was removed in the
+# NumPy 2.0 release"). Without an upper bound, pip is free to
+# install NumPy 2.x and `import pandas_ta` will crash immediately.
+numpy>=1.26.0,<2.0.0
+
+# Historical Market Data
+yfinance>=0.2.54
+
+# Technical Indicators
+pandas-ta>=0.3.14b0
+
+# Charts
+plotly>=5.24.1
+matplotlib>=3.9.2
+
+# Report Generation
+reportlab>=4.2.2
+
+# Utilities
+tqdm>=4.67.0
+tabulate>=0.9.0
+
+# Optional (recommended)
+jupyter>=1.1.1
